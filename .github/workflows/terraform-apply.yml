@@ -5,6 +5,8 @@ on:
 
 env:
   TF_VAR_mysql_admin_password: ${{ secrets.MYSQL_ADMIN_PASSWORD }}
+  ARM_SUBSCRIPTION_ID: ${{ fromJSON(secrets.AZURE_CREDENTIALS ).subscriptionId }}
+
 
 permissions:
   id-token: write
